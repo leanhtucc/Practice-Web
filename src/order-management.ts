@@ -201,24 +201,3 @@ const customerUpdate: UpdateCustomer = {
 const orderUpdate: UpdateOrder = {
   status: OrderStatus.CONFIRMED,
 };
-
-// 8. OUTPUT DEMO
-
-
-console.log("=== QUAN LY DON HANG ===");
-console.log("Customer:", customer);
-console.log("Product:", product);
-console.log("Order:", order);
-
-console.log("\n=== GENERIC ===");
-console.log("Product response:", productResponse);
-console.log("Order response:", orderResponse);
-console.log("Product list:", productListResponse);
-
-console.log("\n=== UTILITY TYPES ===");
-console.log("Create product:", newProduct);
-console.log("Update product:", productUpdate);
-console.log("Product summary:", productSummary);
-console.log("Create customer:", newCustomer);
-console.log("Update customer:", customerUpdate);
-console.log("Update order:", orderUpdate);
