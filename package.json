@@ -1,0 +1,19 @@
+{
+  "name": "practiceweb",
+  "version": "1.0.0",
+  "description": "Bai tap TypeScript - Thiet ke type cho module Quan ly don hang",
+   "main": "dist/order-management.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/order-management.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/node": "^26.4.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
