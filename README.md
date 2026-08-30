@@ -84,15 +84,3 @@ Chạy demo:
 npm start
 ```
 
-## 5. GitHub
-
-Sau khi kiểm tra code thành công:
-
-```bash
-git init
-git add .
-git commit -m "Complete TypeScript order management assignment"
-git branch -M main
-git remote add origin <YOUR_GITHUB_REPOSITORY_URL>
-git push -u origin main
-```
