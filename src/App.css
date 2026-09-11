@@ -1,0 +1,44 @@
+.container {
+  width: 900px;
+  max-width: 90%;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.product-card {
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.pagination {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.active-page {
+  font-weight: bold;
+  background: #222;
+  color: white;
+}
