@@ -1,9 +1,25 @@
 import { StrictMode } from "react";
+
 import { createRoot } from "react-dom/client";
+
+import { Provider } from "react-redux";
+
+import { store } from "./app/store";
+
 import App from "./App";
 
-createRoot(document.getElementById("root")!).render(
+import "./App.css";
+
+const root = document.getElementById("root");
+
+if (!root) {
+  throw new Error("Không tìm thấy root");
+}
+
+createRoot(root).render(
   <StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </StrictMode>
 );
