@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "jest: cartSlice",
+			"type": "shell",
+			"command": "npx jest src/features/cart/cartSlice.test.ts",
+			"problemMatcher": [
+				"$tsc"
+			],
+			"group": "test"
+		},
+		{
+			"label": "jest cartSlice",
+			"type": "shell",
+			"command": "npx jest src/features/cart/cartSlice.test.ts --verbose",
+			"problemMatcher": [],
+			"group": "test"
+		}
+	]
+}
