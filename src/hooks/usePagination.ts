@@ -15,24 +15,22 @@ export function usePagination<T>(
 ): PaginationResult<T> {
   const [currentPage, setCurrentPage] = useState(1);
 
-  const totalPages = Math.ceil(data.length / itemsPerPage);
+  const pageSize = itemsPerPage > 0 ? itemsPerPage : 1;
+  const totalPages = Math.ceil(data.length / pageSize);
 
-  const startIndex = (currentPage - 1) * itemsPerPage;
+  const page = totalPages === 0 ? 1 : Math.min(currentPage, totalPages);
+  const startIndex = (page - 1) * pageSize;
 
-  const endIndex = startIndex + itemsPerPage;
+  const endIndex = startIndex + pageSize;
 
   const currentItems = data.slice(startIndex, endIndex);
 
   const next = () => {
-    setCurrentPage((prevPage) =>
-      prevPage < totalPages ? prevPage + 1 : prevPage
-    );
+    setCurrentPage(page < totalPages ? page + 1 : page);
   };
 
   const prev = () => {
-    setCurrentPage((prevPage) =>
-      prevPage > 1 ? prevPage - 1 : prevPage
-    );
+    setCurrentPage(page > 1 ? page - 1 : page);
   };
 
   const goToPage = (page: number) => {
@@ -42,7 +40,7 @@ export function usePagination<T>(
   };
 
   return {
-    currentPage,
+    currentPage: page,
     totalPages,
     currentItems,
     next,

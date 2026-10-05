@@ -1,4 +1,4 @@
-import { Product } from "../products/productTypes";
+import type { Product } from "../products/productTypes";
 
 export interface CartItem {
   product: Product;
@@ -13,5 +13,3 @@ export interface UpdateQuantityPayload {
   id: number;
   quantity: number;
 }
-
-export type UpdateQuatityPayload = UpdateQuantityPayload;

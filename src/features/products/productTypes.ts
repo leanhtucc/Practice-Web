@@ -6,8 +6,7 @@ export interface Product {
     category: string;
     image: string;
     rating?: {
-        rate?: number;
-        race?: number;
+        rate: number;
         count: number;
     };
 }
